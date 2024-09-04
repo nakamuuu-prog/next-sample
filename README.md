@@ -2,6 +2,11 @@
 
 ![](https://c.media-amazon.com/images/I/71wErlVY0ZL._SY522_.jpg)
 
+[![book-image]][ad-link]
+
+[book-image]: https://c.media-amazon.com/images/I/71wErlVY0ZL._SY522_.jpg
+[ad-link]: https://amzn.to/3z3dbe6
+
 ## 3.6「Next.js 入門」用のリポジトリ
 
 ver12 で学習
