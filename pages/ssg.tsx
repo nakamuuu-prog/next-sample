@@ -36,6 +36,9 @@ const SSG: NextPage<SSGProps> = (props) => {
 // getServerSidePropsはアクセするたびに呼ばれる(SSR)
 // どっちもアクセスするたびに呼ばれてる
 // SSRとの違いはなに？
+// MEMO:
+// npm run dev(開発モード)で実行している場合はリロードするたびにGetStaticPropsが動く
+// npm run start(プロダクションモード)で実行するとリロードしてもGetStaticPropsは動かず、ビルドした時点のものが表示される
 export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
   // MEMO:とりあえず今は全部undefined
   console.log(context.params); // パスパラメータ。SSGの場合はgetStaticPaths関数を別途定義した時に参照可能
