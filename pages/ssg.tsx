@@ -30,6 +30,12 @@ const SSG: NextPage<SSGProps> = (props) => {
 // getStaticPropsという関数を定義すしてexportすると、この関数はビルド時に実行される
 // getStaticPropsは必ずexportし、asyncをつけること！
 // 引数のcontextはオブジェクトで、中には実行関連の情報が詰まっている
+// NOTE:
+// 本にはビルド時に呼ばれると記載されているが、画面をリロードするたびに呼ばれている
+// getStaticPropsはビルド時に呼ばれる(SSG)
+// getServerSidePropsはアクセするたびに呼ばれる(SSR)
+// どっちもアクセスするたびに呼ばれてる
+// SSRとの違いはなに？
 export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
   // MEMO:とりあえず今は全部undefined
   console.log(context.params); // パスパラメータ。SSGの場合はgetStaticPaths関数を別途定義した時に参照可能
