@@ -1,3 +1,5 @@
+// Linkコンポーネントを使って画面遷移すると、クライアントサイドで新しいページを描画
+// 新しいページに必要なデータは非同期で取得しているため、高速なページ遷移が可能
 import Link from "next/link";
 import { useRouter } from "next/router";
 
