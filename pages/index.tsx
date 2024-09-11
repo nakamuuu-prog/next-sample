@@ -1,7 +1,13 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import styled from "styled-components";
+
+// styled.<要素名>でどの要素か指定して、テンプレート文字列でスタイルを定義する
+const H1 = styled.h1`
+  color: red;
+`;
 
 const Home: NextPage = () => {
   return (
@@ -13,12 +19,15 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        {/* NOTE: */}
+        {/* サンプルの画像は「Welcome to」が赤、「Next.js!」が青になっている */}
+        {/* もとのstyleが反映されてないように見える */}
+        <H1>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        </H1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
@@ -59,14 +68,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
