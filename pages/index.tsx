@@ -22,7 +22,8 @@ const Home: NextPage = () => {
         {/* NOTE: */}
         {/* サンプルの画像は「Welcome to」が赤、「Next.js!」が青になっている */}
         {/* もとのstyleが反映されてないように見える */}
-        <H1>
+        {/* 教材の元のclassNameの指定漏れ */}
+        <H1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </H1>
 
